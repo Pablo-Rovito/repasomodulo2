@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getCharacter } from '../actions';
+import {Link} from "react-router-dom"
 /* Commponente de detalles, en el cual renderizaran los datos del personaje que se desee, se toma el
 id del personaje el cual viene por url y a partir de una action pasandole como parametro el id del personaje
 se deberia poder ver en la pagina un h1 con el nombre, un img con la imagen y dos p con el nickname y las occupations */
@@ -20,6 +21,7 @@ export function Details({
 	return (
 		<div>
 			{'holi desde Details 🙋🏿‍♂️'}
+			<Link to="/">Return to Home</Link>
 			<h1>{name}</h1>
 			<img
 				src={img}
