@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { createCharacter } from '../actions';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import styles from "../cssModules/CreateCharacter.module.css"
 
 /* En este componente tendran que hacer un formulario controlado en el cual tendra que validarse
 que todos los inputs tengan algo dentro. Es opcional mostrar un mensaje de error */
@@ -24,10 +26,13 @@ export function CreateCharacter({ createCharacter }) {
 		setDisable(true);
 	}
 
+	
+
 	return (
 		<div>
 			<h4>holi desde CreateChar 🙋🏿‍♂️</h4>
-			<div>
+			<Link to="/">Return to Home</Link>
+			<div className={styles.boton}>
 				<form onSubmit={handleSubmit}>
 					<label>Name</label>
 					<input
